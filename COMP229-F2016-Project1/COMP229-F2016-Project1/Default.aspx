@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
-
+<%-- 	Author's name: Sahil Mahajan
+    	Student	Number:	300881428
+        Date Modified: October 4th, 2016
+    	--%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,7 +12,10 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <%-- Fontawesome CSS --%>
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
-
+    <%-- Raleway Font --%>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" /> 
+    <%-- Custom css --%>
+    <link href="Content/app.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -58,7 +64,7 @@
         <div class="row">
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="" />
+                    <img class="img-responsive" src="/Images/Game1.png" alt="" />
                 </a>
                 <h3>
                     <a href="#">Game One</a>
@@ -67,7 +73,7 @@
             </div>
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="" />
+                    <img class="img-responsive" src="/Images/Game2.png" alt="" />
                 </a>
                 <h3>
                     <a href="#">Game Two</a>
@@ -81,7 +87,7 @@
         <div class="row">
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="" />
+                    <img class="img-responsive" src="/Images/Game3.png" alt="" />
                 </a>
                 <h3>
                     <a href="#">Game Three</a>
@@ -90,7 +96,7 @@
             </div>
             <div class="col-md-6 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="" />
+                    <img class="img-responsive" src="/Images/Game4.png" alt="" />
                 </a>
                 <h3>
                     <a href="#">Game Four</a>
