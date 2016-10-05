@@ -6,9 +6,9 @@
 <head runat="server">
     <title>Project1</title>
     <%-- Bootstrap CSS --%>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <%-- Fontawesome CSS --%>
-    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -148,8 +148,8 @@
     <%-- Scripts --%>
 
     <%-- jquery --%>
-    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="/Scripts/jquery-2.2.4.min.js"></script>
     <%-- bootstrap --%>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
