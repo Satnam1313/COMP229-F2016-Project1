@@ -2,7 +2,7 @@
 <%-- 	Author's name: Sahil Mahajan
     	Student	Number:	300881428
         Date Modified: October 7th, 2016
-        Short Version History: Blank Commits, Started on the initial structure of the main page, and made revisions.
+        Short Version History: 10 Commits, Started on the initial structure of the main page, and made revisions.
         File Description: Default.aspx file.
     	--%>
 <!DOCTYPE html>
@@ -10,8 +10,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Game Tracker-Project1</title>
+    <title>GameTrackerProject1</title>
                     <%-- CSS Section --%>
 
     <%-- Bootstrap CSS --%>
@@ -37,14 +38,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project1</a>
+          <a class="navbar-brand" href="#"><img src="Images/SahilLogo.png" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      
              <ul class="nav navbar-nav navbar-right">
-            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
             <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a></li>
         

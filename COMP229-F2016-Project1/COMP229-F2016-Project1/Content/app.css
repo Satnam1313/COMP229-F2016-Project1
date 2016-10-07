@@ -1,9 +1,14 @@
 ﻿/*  Author's name: Sahil Mahajan
     Student	Number:	300881428
     Date Modified: October 7th, 2016
-    Short Version History: Blank Commits, Started on the initial structure of the main page, and made revisions.  
-    File Description: Custom Css file. Changed body's font family to Raleway, sans-serif.
+    Short Version History: 10 Commits, Started on the initial structure of the main page, and made revisions.  
+    File Description: Custom Css file. Changed body's font family to Raleway, sans-serif, and added padding to nav.
 */	           
 body {
     font-family: 'Raleway', sans-serif;
 }
+
+#bs-example-navbar-collapse-1 {
+padding-bottom: 60px;
+}
+
