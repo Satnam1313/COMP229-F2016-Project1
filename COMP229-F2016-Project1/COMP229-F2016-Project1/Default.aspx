@@ -1,13 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
 <%-- 	Author's name: Sahil Mahajan
     	Student	Number:	300881428
-        Date Modified: October 4th, 2016
+        Date Modified: October 7th, 2016
+        Short Version History: Blank Commits, Started on the initial structure of the main page, and made revisions.
+        File Description: Default.aspx file.
     	--%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Project1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Tracker-Project1</title>
+                    <%-- CSS Section --%>
+
     <%-- Bootstrap CSS --%>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <%-- Fontawesome CSS --%>
@@ -62,7 +68,7 @@
 
         <!-- Games Row -->
         <div class="row">
-            <div class="col-md-6 portfolio-item">
+            <div class="col-md-6">
                 <a href="#">
                     <img class="img-responsive" src="/Images/Game1.png" alt="" />
                 </a>
@@ -71,7 +77,7 @@
                 </h3>
                 <p>Lorem ipsum dolor sit amet, duo purto deserunt eu, et quo quodsi dolorem. Eum no mucius animal, stet menandri quaerendum ut ius. </p>
             </div>
-            <div class="col-md-6 portfolio-item">
+            <div class="col-md-6">
                 <a href="#">
                     <img class="img-responsive" src="/Images/Game2.png" alt="" />
                 </a>
@@ -85,7 +91,7 @@
 
         <!-- Games Row -->
         <div class="row">
-            <div class="col-md-6 portfolio-item">
+            <div class="col-md-6">
                 <a href="#">
                     <img class="img-responsive" src="/Images/Game3.png" alt="" />
                 </a>
@@ -94,7 +100,7 @@
                 </h3>
                 <p>Lorem ipsum dolor sit amet, duo purto deserunt eu, et quo quodsi dolorem. Eum no mucius animal, stet menandri quaerendum ut ius. </p>
             </div>
-            <div class="col-md-6 portfolio-item">
+            <div class="col-md-6">
                 <a href="#">
                     <img class="img-responsive" src="/Images/Game4.png" alt="" />
                 </a>
@@ -135,13 +141,13 @@
         </div>
         <!-- /.row -->
 
-        <hr>
+        <hr />
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website <%= DateTime.Now.Year %></p>
+                    <p>Copyright &copy; SahilProject1 <%= DateTime.Now.Year %></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -151,11 +157,13 @@
     <!-- /.container -->
 
     </form>
-    <%-- Scripts --%>
+                    <%-- JavaScript Section --%>
 
     <%-- jquery --%>
     <script src="Scripts/jquery-2.2.4.min.js"></script>
     <%-- bootstrap --%>
     <script src="Scripts/bootstrap.min.js"></script>
+    <%-- Custom js --%>
+    <script src="Scripts/app.js"></script>
 </body>
 </html>
