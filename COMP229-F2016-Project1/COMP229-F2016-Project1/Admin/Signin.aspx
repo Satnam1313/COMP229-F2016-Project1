@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" /> 
     <%-- Custom css --%>
     <link href="/Content/app.css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,20 +25,21 @@
 		<hr />
         <div class="row">
             <div class="form-group col-md-12">
-                <asp:TextBox ID="TextBox_sigin_email" runat="server" class="form-control input-lg" placeholder="Email address" ValidationGroup="signin"></asp:TextBox>
+                <asp:TextBox ID="TextBox_signin_email" runat="server" CssClass="form-control input-lg" placeholder="Email address" ValidationGroup="signin"></asp:TextBox>
+                <asp:Label ID="Label_signin_email" runat="server" CssClass="text-danger" Text="Hello"></asp:Label>
 		    </div>
         </div>
 		
         <div class="row">
 		    <div class="form-group col-md-12">
-                <asp:TextBox ID="TextBox_signin_password" runat="server" class="form-control input-lg" placeholder="Password" TextMode="password" ValidationGroup="signin"></asp:TextBox>
+                <asp:TextBox ID="TextBox_signin_password" runat="server" CssClass="form-control input-lg" placeholder="Password" TextMode="password" ValidationGroup="signin"></asp:TextBox>
 		    </div>
         </div>
 
 		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-                <asp:Button ID="Button_singin" runat="server" class="btn btn-lg btn-success btn-block" Text="Sign in" ValidationGroup="signin"/>
+                <asp:Button ID="Button_signin" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Sign in" ValidationGroup="signin" OnClientClick="return validate_signin();"/>
 			</div>
 		</div>
 	</div>
@@ -47,29 +49,29 @@
 		<hr />
         <div class="row">
             <div class="form-group col-md-6">
-                <asp:TextBox ID="TextBox_register_first_name" runat="server" class="form-control input-lg" placeholder="First name" ValidationGroup="register"></asp:TextBox>
+                <asp:TextBox ID="TextBox_register_first_name" runat="server" CssClass="form-control input-lg" placeholder="First name" ValidationGroup="register"></asp:TextBox>
 			</div>
             <div class="form-group col-md-6">
-                <asp:TextBox ID="TextBox_register_last_name" runat="server" class="form-control input-lg" placeholder="Last name" ValidationGroup="register"></asp:TextBox>
+                <asp:TextBox ID="TextBox_register_last_name" runat="server" CssClass="form-control input-lg" placeholder="Last name" ValidationGroup="register"></asp:TextBox>
 			</div>
         </div>
         <div class="row">
 			<div class="form-group col-md-12">
-                <asp:TextBox ID="TextBox_register_email" runat="server" class="form-control input-lg" placeholder="Email address" ValidationGroup="register"></asp:TextBox>
+                <asp:TextBox ID="TextBox_register_email" runat="server" CssClass="form-control input-lg" placeholder="Email address" ValidationGroup="register"></asp:TextBox>
 			</div>
         </div>
         <div class="row">
 			<div class="form-group col-md-6">
-                <asp:TextBox ID="TextBox_register_password" runat="server" class="form-control input-lg" placeholder="Password" TextMode="password" ValidationGroup="register"></asp:TextBox>
+                <asp:TextBox ID="TextBox_register_password" runat="server" CssClass="form-control input-lg" placeholder="Password" TextMode="password" ValidationGroup="register"></asp:TextBox>
 			</div>
             <div class="form-group col-md-6">
-                <asp:TextBox ID="TextBox_register_password_confirm" runat="server" class="form-control input-lg" placeholder="Confirm password" TextMode="password" ValidationGroup="register"></asp:TextBox>
+                <asp:TextBox ID="TextBox_register_password_confirm" runat="server" CssClass="form-control input-lg" placeholder="Confirm password" TextMode="password" ValidationGroup="register"></asp:TextBox>
 			</div>
         </div>
 			<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-                <asp:Button ID="Button_register" runat="server" class="btn btn-lg btn-success btn-block" Text="Register" ValidationGroup="register" />
+                <asp:Button ID="Button_register" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Register" ValidationGroup="register" />
 			</div>
 		</div>
 	</div>
@@ -79,15 +81,22 @@
     </form>
 
     <%-- jquery --%>
-    <script src="/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <%-- bootstrap --%>
-    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
     <%-- Custom js --%>
-    <script src="/Scripts/app.js"></script>
+    <script src="../Scripts/app.js"></script>
 
 
     <script>
-
+        function validate_signin() {
+            if ($('#<%= TextBox_signin_email.ClientID %>').val().length == 0) {
+                alert();
+                return false;
+                <%--$('#<%= Label_signin_email.ClientID %>').val('Please enter email address');
+                return false;--%>
+            }
+        }
     </script>
 </body>
 </html>

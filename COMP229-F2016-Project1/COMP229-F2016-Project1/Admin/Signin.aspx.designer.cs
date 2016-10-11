@@ -22,13 +22,22 @@ namespace COMP229_F2016_Project1.Admin {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// TextBox_sigin_email control.
+        /// TextBox_signin_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_sigin_email;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_signin_email;
+        
+        /// <summary>
+        /// Label_signin_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_signin_email;
         
         /// <summary>
         /// TextBox_signin_password control.
@@ -40,13 +49,13 @@ namespace COMP229_F2016_Project1.Admin {
         protected global::System.Web.UI.WebControls.TextBox TextBox_signin_password;
         
         /// <summary>
-        /// Button_singin control.
+        /// Button_signin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_singin;
+        protected global::System.Web.UI.WebControls.Button Button_signin;
         
         /// <summary>
         /// TextBox_register_first_name control.
