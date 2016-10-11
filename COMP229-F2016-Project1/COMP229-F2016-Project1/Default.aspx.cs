@@ -10,7 +10,8 @@ using System.Data.SqlClient;
 
 
 namespace COMP229_F2016_Project1
-{
+{   
+    /*Loads the data from the database for the four games for the current week*/
     public partial class Default : System.Web.UI.Page
     {
         private string strConnString = ConfigurationManager.ConnectionStrings["game_trackerConnectionString"].ConnectionString;
@@ -68,6 +69,10 @@ namespace COMP229_F2016_Project1
         //Load data on the screen
         private void loadData()
         {
+            if (dataTable.Rows.Count == 0)
+            {
+                return;
+            }
             game1_name.Text = dataTable.Rows[0]["game_name"].ToString();
             int team_1_id = Int32.Parse(dataTable.Rows[0]["game_team_1"].ToString());
             int team_2_id = Int32.Parse(dataTable.Rows[0]["game_team_2"].ToString());

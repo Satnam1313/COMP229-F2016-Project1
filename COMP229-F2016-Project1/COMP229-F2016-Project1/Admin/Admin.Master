@@ -64,7 +64,7 @@
 
           <!-- Footer -->
         <footer>
-            <div class="container">
+            <div class="container jumbotron">
                 <hr />
                 <div class="row">
                     <div class="col-lg-12">

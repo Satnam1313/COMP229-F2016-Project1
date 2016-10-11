@@ -2,5 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div  class="container jumbotron">
+        Display page to edit the game 
+    </div>
     Display page to edit the game 
 </asp:Content>
