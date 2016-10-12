@@ -26,7 +26,7 @@
         <div class="row">
             <div class="form-group col-md-12">
                 <asp:TextBox ID="TextBox_signin_email" runat="server" CssClass="form-control input-lg" placeholder="Email address" ValidationGroup="signin"></asp:TextBox>
-                <asp:Label ID="Label_signin_email" runat="server" CssClass="text-danger" Text="Hello"></asp:Label>
+                <asp:Label ID="Label_signin_email" runat="server" CssClass="text-danger"></asp:Label>
 		    </div>
         </div>
 		
@@ -90,12 +90,17 @@
 
     <script>
         function validate_signin() {
+            $('#<%= Label_signin_email.ClientID %>').html('');
             if ($('#<%= TextBox_signin_email.ClientID %>').val().length == 0) {
-                alert();
+                $('#<%= Label_signin_email.ClientID %>').html('Please enter email address');
                 return false;
-                <%--$('#<%= Label_signin_email.ClientID %>').val('Please enter email address');
-                return false;--%>
             }
+            <%--var regex_email = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
+            var n = $('#<%= TextBox_signin_email.ClientID %>').val().match(regex_email);
+            if (!n) {
+                $('#<%= Label_signin_email.ClientID %>').html('Invalid email address');
+                return false;
+            }--%>
         }
     </script>
 </body>

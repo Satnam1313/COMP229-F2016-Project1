@@ -12,3 +12,19 @@ body {
 padding-bottom: 60px;
 }
 
+.myNewDivHeight{
+        height:250px;
+    }
+
+.myNewDivHeight div{
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 360px) {
+    
+    /*.myNewDivHeight h5{
+    display:none;
+}*/
+}

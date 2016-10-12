@@ -67,16 +67,64 @@
         </div>
         <!-- /.row -->
 
+        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
         <!-- Games Row -->
         <div class="row">
             <div class="col-md-6">
-                <a href="#">
-                    <img class="img-responsive" src="/Images/Game1.png" alt="" />
-                </a>
+                <div class="row ">
+                    <%-- Team 1 --%>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <div class="row myNewDivHeight">
+                        <%-- Team 1 logo --%>
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+                            <asp:Image ID="game1_team1_logo" runat="server" CssClass="img-responsive" ImageUrl="~/Images/Game1.png" />
+                        </div>
+                        <%-- Team 1 name --%>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5>
+                                <asp:Label ID="game1_team1_name" runat="server" Text="Team 1"></asp:Label>
+                            </h5>
+                        </div>
+                        </div>
+                    </div>
+
+                    <%-- vs --%>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <div class="row myNewDivHeight">
+                        <%-- VS --%>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                           <%-- <div class="row">
+                                <h3 class="text-center">VS</h3>
+                            </div>--%>
+                                <h3 class="text-center">
+                                    <asp:Label ID="game1_score" runat="server" Text="1:1"></asp:Label>
+                                </h3>
+                        </div>
+                        </div>
+                    </div>
+
+                    <%-- Team 2 --%>
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <div class="row myNewDivHeight">
+                        <%-- Team 2 name --%>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="text-right">
+                                <asp:Label ID="game1_team2_name" runat="server" Text="Team 2"></asp:Label>
+                            </h5>
+                        </div>
+                             <%-- Team 2 logo --%>
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+                            <asp:Image ID="game1_team2_logo" runat="server" CssClass="img-responsive" ImageUrl="~/Images/Game1.png" />                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
                 <h3>
-                    <a href="#">Game One</a>
+                    <asp:HyperLink ID="game1_name" runat="server">Game One</asp:HyperLink>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, duo purto deserunt eu, et quo quodsi dolorem. Eum no mucius animal, stet menandri quaerendum ut ius. </p>
+                <p>                                
+                    <asp:Label ID="game1_short_description" runat="server" Text="Lorem ipsum dolor sit amet, duo purto deserunt eu, et quo quodsi dolorem. Eum no mucius animal, stet menandri quaerendum ut ius."></asp:Label>
+                </p>
             </div>
             <div class="col-md-6">
                 <a href="#">
