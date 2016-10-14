@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace COMP229_F2016_Project1.Admin
+namespace COMP229_F2016_Project1.Admin.Game
 {
-    public partial class Signin : System.Web.UI.Page
+    public partial class Add : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

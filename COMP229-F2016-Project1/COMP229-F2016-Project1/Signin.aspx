@@ -1,22 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="COMP229_F2016_Project1.Admin.Signin" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <%-- Bootstrap CSS --%>
-    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
-    <%-- Fontawesome CSS --%>
-    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
-    <%-- Raleway Font --%>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" /> 
-    <%-- Custom css --%>
-    <link href="/Content/app.css" rel="stylesheet" />
-
-</head>
-<body>
-    <form id="form1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameTracker.Master" AutoEventWireup="true" CodeBehind="Signin.aspx.cs" Inherits="COMP229_F2016_Project1.Signin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
 
 <div class="row" style="margin-top:20px">
@@ -78,17 +63,7 @@
 </div>
 
 </div>
-    </form>
-
-    <%-- jquery --%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <%-- bootstrap --%>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <%-- Custom js --%>
-    <script src="../Scripts/app.js"></script>
-
-
-    <script>
+     <script>
         function validate_signin() {
             $('#<%= Label_signin_email.ClientID %>').html('');
             if ($('#<%= TextBox_signin_email.ClientID %>').val().length == 0) {
@@ -103,5 +78,4 @@
             }--%>
         }
     </script>
-</body>
-</html>
+</asp:Content>

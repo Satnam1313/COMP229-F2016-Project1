@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameTracker.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Admin.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <!-- Page Content -->
-    <div class="container">
+   <div class="container">
 
         <!-- Page Header -->
         <div class="row">
@@ -67,9 +66,16 @@
                         </div>
                     </div>
                 </div>
-                <h3>
-                    <asp:HyperLink ID="game1_name" runat="server">Game One</asp:HyperLink>
-                </h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <h3>
+                            <asp:HyperLink ID="game1_name" runat="server">Game One</asp:HyperLink>
+                        </h3>
+                    </div>
+                    <div  class="col-md-3 text-right">
+                        <h3><asp:HyperLink ID="edit_game_1" runat="server"><i class="fa fa-pencil" aria-hidden="true"></i> edit</asp:HyperLink></h3>
+                    </div>
+                </div>
                 <p>                                
                     <asp:Label ID="game1_short_description" runat="server" Text="Lorem ipsum dolor sit amet, duo purto deserunt eu, et quo quodsi dolorem. Eum no mucius animal, stet menandri quaerendum ut ius."></asp:Label>
                 </p>
@@ -191,5 +197,4 @@
        
 
     </div>
-    <!-- /.container -->
 </asp:Content>

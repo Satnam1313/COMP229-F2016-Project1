@@ -8,8 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-
-namespace COMP229_F2016_Project1
+namespace COMP229_F2016_Project1.Admin
 {
     public partial class Default : System.Web.UI.Page
     {

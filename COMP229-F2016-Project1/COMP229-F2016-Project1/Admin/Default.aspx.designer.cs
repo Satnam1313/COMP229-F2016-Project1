@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COMP229_F2016_Project1 {
+namespace COMP229_F2016_Project1.Admin {
     
     
     public partial class Default {
@@ -74,6 +74,15 @@ namespace COMP229_F2016_Project1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink game1_name;
+        
+        /// <summary>
+        /// edit_game_1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink edit_game_1;
         
         /// <summary>
         /// game1_short_description control.
