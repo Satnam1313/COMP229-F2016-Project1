@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="container">
+   <div class="container jumbotron">
 
         <!-- Page Header -->
         <div class="row">
@@ -173,16 +173,19 @@
                         <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
                     </li>
                     <li class="active">
-                        <a href="#">Week 1</a>
+                        <asp:LinkButton ID="link_week_1" runat="server" OnClick="link_week_1_Click">Week 1</asp:LinkButton>
                     </li>
                     <li>
-                        <a href="#">Week 2</a>
+                        <asp:LinkButton ID="link_week_2" runat="server" OnClick="link_week_2_Click">Week 2</asp:LinkButton>
+
                     </li>
                     <li>
-                        <a href="#">Week 3</a>
+                        <asp:LinkButton ID="link_week_3" runat="server" OnClick="link_week_3_Click">Week 3</asp:LinkButton>
+
                     </li>
                     <li>
-                        <a href="#">Week 4</a>
+                        <asp:LinkButton ID="link_week_4" runat="server" OnClick="link_week_4_Click">Week 4</asp:LinkButton>
+
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>

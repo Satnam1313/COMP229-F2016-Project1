@@ -3,7 +3,72 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div  class="container jumbotron">
-        Display page to edit the game 
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_game_name" runat="server" CssClass="form-control" placeholder="Game name"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:DropDownList ID="DropDownList_team_1" runat="server" DataSourceID="SqlDataSource_teams" DataTextField="team_name" DataValueField="team_id" CssClass="form-control dropdown"></asp:DropDownList>
+                <asp:SqlDataSource runat="server" ID="SqlDataSource_teams" ConnectionString='<%$ ConnectionStrings:game_trackerConnectionString %>' SelectCommand="SELECT [team_id], [team_name] FROM [team]"></asp:SqlDataSource>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:DropDownList ID="DropDownList_team_2" runat="server" DataSourceID="SqlDataSource_teams" DataTextField="team_name" DataValueField="team_id" CssClass="form-control dropdown"></asp:DropDownList>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_score_ht" runat="server" CssClass="form-control" placeholder="Half-time score"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_score_ft" runat="server" CssClass="form-control" placeholder="Full-time score"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_date" runat="server" CssClass="form-control" placeholder="Date"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_stadium_name" runat="server" CssClass="form-control" placeholder="Stadium name"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_referee_name" runat="server" CssClass="form-control" placeholder="Referee name"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_short_description" runat="server" CssClass="form-control" placeholder="Short description" Rows="3" TextMode="MultiLine"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <asp:TextBox ID="TextBox_spectators" runat="server" CssClass="form-control" placeholder="Number of spectators" TextMode="Number"></asp:TextBox>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+                <asp:Button ID="Button_submit" runat="server" CssClass="btn btn-success" Text="Update game" OnClick="Button_submit_Click"></asp:Button>
+            </div>
+        </div>
+
     </div>
-    Display page to edit the game 
 </asp:Content>

@@ -41,12 +41,12 @@ namespace COMP229_F2016_Project1.Admin
             }
         }
         //Read all games by current week
-        private DataTable sp_game_read_all_for_current_week(DateTime today)
+        private DataTable sp_game_read_all_for_current_week(DateTime date)
         {
             SqlConnection con = new SqlConnection(strConnString);
             SqlCommand cmd = new SqlCommand("sp_game_read_all_for_current_week", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@current_week_in", SqlDbType.DateTime).Value = today;
+            cmd.Parameters.Add("@current_week_in", SqlDbType.DateTime).Value = date;
             DataTable dt = GetData(cmd);
 
             return dt;
@@ -67,6 +67,10 @@ namespace COMP229_F2016_Project1.Admin
         //Load data on the screen
         private void loadData()
         {
+            if (dataTable.Rows.Count == 0)
+            {
+                return;
+            }
             game1_name.Text = dataTable.Rows[0]["game_name"].ToString();
             int team_1_id = Int32.Parse(dataTable.Rows[0]["game_team_1"].ToString());
             int team_2_id = Int32.Parse(dataTable.Rows[0]["game_team_2"].ToString());
@@ -87,6 +91,34 @@ namespace COMP229_F2016_Project1.Admin
             }
             game1_score.Text = dataTable.Rows[0]["game_score_ft"].ToString();
             game1_short_description.Text = dataTable.Rows[0]["game_short_description"].ToString();
+        }
+
+        protected void link_week_1_Click(object sender, EventArgs e)
+        {
+            DateTime date = new DateTime(2016, 10, 09);
+            dataTable = sp_game_read_all_for_current_week(date);
+            loadData();
+        }
+
+        protected void link_week_2_Click(object sender, EventArgs e)
+        {
+            DateTime date = new DateTime(2016, 10, 16);
+            dataTable = sp_game_read_all_for_current_week(date);
+            loadData();
+        }
+
+        protected void link_week_3_Click(object sender, EventArgs e)
+        {
+            DateTime date = new DateTime(2016, 10, 23);
+            dataTable = sp_game_read_all_for_current_week(date);
+            loadData();
+        }
+
+        protected void link_week_4_Click(object sender, EventArgs e)
+        {
+            DateTime date = new DateTime(2016, 10, 30);
+            dataTable = sp_game_read_all_for_current_week(date);
+            loadData();
         }
     }
 }

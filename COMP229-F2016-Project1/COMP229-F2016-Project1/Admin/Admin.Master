@@ -52,7 +52,8 @@
              <ul class="nav navbar-nav navbar-right">
             <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li class="nav-paddingMiddle"><a href="/Admin/Game/Add.aspx"><i class="fa fa-plus" aria-hidden="true"></i> Add game</a></li>
-            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
+            <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText='<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out'/>
+            </li>
         
           </ul>
         </div><!-- /.navbar-collapse -->

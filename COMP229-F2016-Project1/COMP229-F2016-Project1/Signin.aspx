@@ -24,7 +24,7 @@
 		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-                <asp:Button ID="Button_signin" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Sign in" ValidationGroup="signin" OnClientClick="return validate_signin();"/>
+                <asp:Button ID="Button_signin" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Sign in" ValidationGroup="signin" OnClientClick="return validate_signin();" OnClick="Button_signin_Click"/>
 			</div>
 		</div>
 	</div>

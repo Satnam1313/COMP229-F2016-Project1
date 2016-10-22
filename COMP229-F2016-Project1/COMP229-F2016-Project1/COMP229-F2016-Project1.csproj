@@ -86,6 +86,7 @@
     <Content Include="Scripts\jquery-2.2.4.min.map" />
     <Content Include="GameTracker.Master" />
     <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

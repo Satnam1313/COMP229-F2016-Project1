@@ -40,7 +40,8 @@
              <ul class="nav navbar-nav navbar-right">
             <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
             <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
-            <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a></li>
+            <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText='<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out' LoginText='<i class="fa fa-sign-in" aria-hidden="true"></i> Sign in'/>
+            </li>
         
           </ul>
         </div><!-- /.navbar-collapse -->
