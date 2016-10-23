@@ -96,7 +96,11 @@ namespace COMP229_F2016_Project1
             }
             (LoginView1.FindControl("game1_score") as Label).Text = dataTable.Rows[0]["game_score_ft"].ToString();
             (LoginView1.FindControl("game1_short_description") as Label).Text = dataTable.Rows[0]["game_short_description"].ToString();
-            (LoginView1.FindControl("edit_game_1") as LinkButton).PostBackUrl = "~/Admin/Game/Edit.aspx?game_id=" + dataTable.Rows[0]["game_id"].ToString();
+
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                (LoginView1.FindControl("edit_game_1") as LinkButton).PostBackUrl = "~/Admin/Game/Edit.aspx?game_id=" + dataTable.Rows[0]["game_id"].ToString();
+            }
         }
 
         protected void link_week_1_Click(object sender, EventArgs e)
