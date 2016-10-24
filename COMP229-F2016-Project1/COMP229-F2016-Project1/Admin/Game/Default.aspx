@@ -7,7 +7,7 @@
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
 <asp:GridView ID="GridView_games" runat="server" AutoGenerateColumns="False" DataKeyNames="game_id" AllowPaging="true"
-            OnPageIndexChanging="OnPaging" OnRowEditing="GridView_games_RowEditing" PageSize="7" ShowHeaderWhenEmpty="true" CssClass="table table-bordered"
+            OnPageIndexChanging="OnPaging" OnRowEditing="GridView_games_RowEditing" PageSize="4" ShowHeaderWhenEmpty="true" CssClass="table table-bordered"
             HeaderStyle-BackColor="#23527C" HeaderStyle-ForeColor="#FFFFFF">
             <Columns>
                 <asp:TemplateField HeaderText="Game ID" Visible="false" HeaderStyle-CssClass="text-center">

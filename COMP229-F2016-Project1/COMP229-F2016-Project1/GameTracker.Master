@@ -21,32 +21,66 @@
 <body>
     <form id="form1" runat="server">
          <%-- Navbar --%>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="Images/SahilLogo.png" /></a>
-        </div>
+        <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+            <nav class="navbar navbar-default">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="Images/SahilLogo.png" /></a>
+                </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      
-             <ul class="nav navbar-nav navbar-right">
-            <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
-            <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText='<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out' LoginText='<i class="fa fa-sign-in" aria-hidden="true"></i> Sign in'/>
-            </li>
+                     <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="/admin/game/default.aspx"><i class="fa fa-eye" aria-hidden="true"></i> View All Games</a></li>
+                    <li><a href="/admin/game/add.aspx"><i class="fa fa-plus" aria-hidden="true"></i> Add New Game</a></li>
+                    <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText='<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out' LoginText='<i class="fa fa-sign-in" aria-hidden="true"></i> Sign in'/>
+                    </li>
         
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        </LoggedInTemplate>
+            <AnonymousTemplate>
+                <nav class="navbar navbar-default">
+                  <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#"><img src="Images/SahilLogo.png" /></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     
+                         <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-paddingMiddle"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
+                        <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText='<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out' LoginText='<i class="fa fa-sign-in" aria-hidden="true"></i> Sign in'/>
+                        </li>
+        
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+            </AnonymousTemplate>
+        </asp:LoginView>
+    
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

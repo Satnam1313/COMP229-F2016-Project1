@@ -23,11 +23,15 @@ namespace COMP229_F2016_Project1
                 {
                     Response.Redirect("/Admin");
                 }
+                label_register_message.Text = "";
+                label_signin_message.Text = "";
             }
         }
 
         protected void Button_signin_Click(object sender, EventArgs e)
         {
+            label_register_message.Text = "";
+            label_signin_message.Text = "";
             string user_username = TextBox_signin_email.Text;
             string user_password = TextBox_signin_password.Text;
             dataTable = sp_user_read_by_email_and_password(user_username, user_password);
@@ -69,6 +73,7 @@ namespace COMP229_F2016_Project1
                 // Never tell the user if just the username is password is incorrect.
                 // That just gives them a place to start, once they've found one or
                 // the other is correct!
+                label_signin_message.Text = "Invalid email or password.";
             }
         }
 
@@ -98,6 +103,45 @@ namespace COMP229_F2016_Project1
             SqlConnection con = new SqlConnection(strConnString);
             SqlCommand cmd = new SqlCommand("sp_user_read_by_email_and_password", con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@user_email", SqlDbType.NVarChar).Value = email;
+            cmd.Parameters.Add("@user_password", SqlDbType.NVarChar).Value = password;
+            DataTable dt = GetData(cmd);
+
+            return dt;
+        }
+
+        protected void Button_register_Click(object sender, EventArgs e)
+        {
+            label_register_message.Text = "";
+            label_signin_message.Text = "";
+            string first_name = TextBox_register_first_name.Text;
+            string last_name = TextBox_register_last_name.Text;
+            string email = TextBox_register_email.Text;
+            string password = TextBox_register_password.Text;
+
+            DataTable dt = sp_user_insert(first_name, last_name, email, password);
+            if(dt.Rows.Count>0)
+            {
+                //registration successful
+                label_register_message.Text = "Registration successful. Please proceed to signin.";
+                TextBox_register_first_name.Text = "";
+                TextBox_register_email.Text = "";
+                TextBox_register_last_name.Text = "";
+            }
+            else
+            {
+                //Registration failed
+                label_register_message.Text = "Registration failed. Please try again.";
+            }
+        }
+
+        private DataTable sp_user_insert(string first_name, string last_name, string email, string password)
+        {
+            SqlConnection con = new SqlConnection(strConnString);
+            SqlCommand cmd = new SqlCommand("sp_user_insert", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@user_first_name", SqlDbType.NVarChar).Value = first_name;
+            cmd.Parameters.Add("@user_last_name", SqlDbType.NVarChar).Value = last_name;
             cmd.Parameters.Add("@user_email", SqlDbType.NVarChar).Value = email;
             cmd.Parameters.Add("@user_password", SqlDbType.NVarChar).Value = password;
             DataTable dt = GetData(cmd);

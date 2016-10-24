@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container jumbotron">
-
+        
 <div class="row" style="margin-top:20px">
     <div class="col-xs-12 col-sm-6 col-md-6">
 		<h2><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</h2>
@@ -20,7 +20,12 @@
                 <asp:TextBox ID="TextBox_signin_password" runat="server" CssClass="form-control input-lg" placeholder="Password" TextMode="password" ValidationGroup="signin"></asp:TextBox>
 		    </div>
         </div>
-
+        <br />
+        <div class="row">
+		    <div class="col-md-12 text-center">
+                <asp:Label ID="label_signin_message" runat="server" CssClass="alert-danger"></asp:Label>
+		    </div>
+        </div>
 		<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
@@ -53,10 +58,16 @@
                 <asp:TextBox ID="TextBox_register_password_confirm" runat="server" CssClass="form-control input-lg" placeholder="Confirm password" TextMode="password" ValidationGroup="register"></asp:TextBox>
 			</div>
         </div>
+        <br />
+        <div class="row">
+		    <div class="form-group col-md-12 text-center">
+                <asp:Label ID="label_register_message" runat="server" CssClass="alert-danger"></asp:Label>
+		    </div>
+        </div>
 			<hr />
 		<div class="row">
 			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-                <asp:Button ID="Button_register" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Register" ValidationGroup="register" />
+                <asp:Button ID="Button_register" runat="server" CssClass="btn btn-lg btn-success btn-block" Text="Register" ValidationGroup="register" OnClick="Button_register_Click"  />
 			</div>
 		</div>
 	</div>
