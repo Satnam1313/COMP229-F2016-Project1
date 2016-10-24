@@ -1,5 +1,12 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameTracker.master.cs" Inherits="COMP229_F2016_Project1.GameTracker" %>
-
+<%-- 	Author's name: Sahil Mahajan
+     	Student	Number:	300881428
+        Date Modified: October 24th, 2016
+        Version	History:Part-1.Project Concept & Setup, 
+                        Part-2.Main	Game Tracking Page, DB & Partial Function
+                        Part-3.Full Functionality & Site Security
+        File Description: Master file, with Aspx code. GameTracker.Master, default structure for the game template. 
+    --%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

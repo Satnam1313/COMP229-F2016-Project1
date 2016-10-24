@@ -11,8 +11,7 @@ using System.Data.SqlClient;
 namespace COMP229_F2016_Project1.Admin
 {
     public partial class Default : System.Web.UI.Page
-    {
-        
+    {   // Redirecting to the home page for admin        
         protected void Page_Load(object sender, EventArgs e)
         {
             Response.Redirect("~/");

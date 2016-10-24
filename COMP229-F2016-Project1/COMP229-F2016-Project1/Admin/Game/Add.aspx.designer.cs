@@ -121,12 +121,12 @@ namespace COMP229_F2016_Project1.Admin.Game {
         protected global::System.Web.UI.WebControls.Button Button_submit;
         
         /// <summary>
-        /// Button_cancel control.
+        /// Button_home control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_cancel;
+        protected global::System.Web.UI.WebControls.Button Button_home;
     }
 }

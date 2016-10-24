@@ -3,9 +3,16 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-
+//Author's name: Sahil Mahajan
+//Student Number:	300881428
+//Date Modified: October 24th, 2016
+//Version History:Part-1.Project Concept & Setup, 
+//Part-2.Main Game Tracking Page, DB & Partial Function
+//Part-3.Full Functionality & Site Security
+//File Description: Aspx file.Default.aspx, functionality for general user and added functionality for admin. 	
+    
 namespace COMP229_F2016_Project1.Admin.Game
-{
+{ 
     public partial class Add : System.Web.UI.Page
     {
         private string strConnString = ConfigurationManager.ConnectionStrings["game_trackerConnectionString"].ConnectionString;
@@ -55,14 +62,14 @@ namespace COMP229_F2016_Project1.Admin.Game
 
             return dt;
         }
-
+        // Called when user clicks on submit button
         protected void Button_submit_Click(object sender, EventArgs e)
         {
             sp_game_insert(TextBox_game_name.Text, DropDownList_team_1.SelectedValue, DropDownList_team_2.SelectedValue, TextBox_score_ht.Text, TextBox_score_ft.Text, TextBox_date.Text, TextBox_stadium_name.Text, TextBox_referee_name.Text, TextBox_short_description.Text, TextBox_spectators.Text);
             Response.Redirect("~/");
         }
-
-        protected void Button_cancel_Click(object sender, EventArgs e)
+        // Called when user clicks on home button
+        protected void Button_home_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/");
         }

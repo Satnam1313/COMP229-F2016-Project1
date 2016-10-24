@@ -26,7 +26,7 @@ namespace COMP229_F2016_Project1
         string[] array_game_short_description = { "game1_short_description", "game2_short_description", "game3_short_description", "game4_short_description", };
         string[] array_game_edit = { "game1_edit", "game2_edit", "game3_edit", "game4_edit", }; 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   //Calls the function that loads the data for week 1
             if (!IsPostBack)
             {
                 link_week_1_Click(sender, e);
@@ -114,14 +114,9 @@ namespace COMP229_F2016_Project1
                     (LoginView1.FindControl(array_game_edit[i]) as LinkButton).PostBackUrl = "~/Admin/Game/Edit.aspx?game_id=" + dataTable.Rows[i]["game_id"].ToString();
                 }
 
-            }
-
-
-
-
-            
+            }          
         }
-
+        // Loads the data for week 1
         protected void link_week_1_Click(object sender, EventArgs e)
         {
             DateTime date = new DateTime(2016,10,09);
@@ -129,7 +124,7 @@ namespace COMP229_F2016_Project1
             loadData();
             (LoginView1.FindControl("link_week_1") as LinkButton).CssClass="active";
         }
-
+        // Loads the data for week 2
         protected void link_week_2_Click(object sender, EventArgs e)
         {
             DateTime date = new DateTime(2016, 10, 16);
@@ -137,14 +132,14 @@ namespace COMP229_F2016_Project1
             loadData();
             (LoginView1.FindControl("link_week_2") as LinkButton).CssClass = "active";
         }
-
+        // Loads the data for week 3
         protected void link_week_3_Click(object sender, EventArgs e)
         {
             DateTime date = new DateTime(2016, 10, 23);
             dataTable = sp_game_read_all_for_current_week(date);
             loadData();
         }
-
+        // Loads the data for week 4
         protected void link_week_4_Click(object sender, EventArgs e)
         {
             DateTime date = new DateTime(2016, 10, 30);

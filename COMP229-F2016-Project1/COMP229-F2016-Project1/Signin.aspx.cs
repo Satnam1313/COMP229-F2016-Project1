@@ -27,7 +27,7 @@ namespace COMP229_F2016_Project1
                 label_signin_message.Text = "";
             }
         }
-
+        // Verifies if the user is valid or not and
         protected void Button_signin_Click(object sender, EventArgs e)
         {
             label_register_message.Text = "";

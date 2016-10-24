@@ -9,12 +9,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace COMP229_F2016_Project1.Admin.Game
-{
+{  
     public partial class Default : System.Web.UI.Page
-    {
+    {   //Variable name for the connection string
         private string strConnString = ConfigurationManager.ConnectionStrings["game_trackerConnectionString"].ConnectionString;
         DataTable dataTable;
-
+        //Loading gridview with all games
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -45,7 +45,7 @@ namespace COMP229_F2016_Project1.Admin.Game
                 return dt;
             }
         }
-
+        //Reading all games
         private DataTable sp_game_read_all()
         {
             SqlConnection con = new SqlConnection(strConnString);
@@ -55,7 +55,7 @@ namespace COMP229_F2016_Project1.Admin.Game
 
             return dt;
         }
-
+        //Pagination - Moving from one page to another
         protected void OnPaging(object sender, GridViewPageEventArgs e)
         {
             dataTable = sp_game_read_all();
@@ -63,14 +63,14 @@ namespace COMP229_F2016_Project1.Admin.Game
             GridView_games.PageIndex = e.NewPageIndex;
             GridView_games.DataBind();
         }
-
+        // This function will be called when the user clicks on the edit button
         protected void GridView_games_RowEditing(object sender, GridViewEditEventArgs e)
         {
             String str = ((Label)GridView_games.Rows[e.NewEditIndex].FindControl("label_game_id")).Text;
             int i = Convert.ToInt32(str);
             Response.Redirect("~/Admin/game/edit.aspx?game_id=" + i);
         }
-
+        // This function will be called when the user clicks on the delete button
         protected void ButtonDelete_Click(object sender, ImageClickEventArgs e)
         {
             ImageButton imageButtonRemove = (ImageButton)sender;
@@ -81,7 +81,7 @@ namespace COMP229_F2016_Project1.Admin.Game
             GridView_games.DataBind();
 
         }
-
+        // Stored procedure being called to delete the selected game
         private DataTable sp_game_delete_by_id( int game_id)
         {
             SqlConnection con = new SqlConnection(strConnString);

@@ -6,12 +6,12 @@ using System.Data.SqlClient;
 namespace COMP229_F2016_Project1.Admin.Game
 {
     public partial class Edit : System.Web.UI.Page
-    {
+    {   //Variable name for the connection string
         private string strConnString = ConfigurationManager.ConnectionStrings["game_trackerConnectionString"].ConnectionString;
         DataTable dataTable;
         static string game_id;
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   // Loads the form witht the data for the particular game, and fetching the game id fromt the querry string
             if (!IsPostBack)
             {
                 game_id = Request.QueryString["game_id"];
@@ -79,7 +79,7 @@ namespace COMP229_F2016_Project1.Admin.Game
 
             return dt;
         }
-
+        // Loads the data onto the form fetched from the database
         private void loadData()
         {
             if (dataTable.Rows.Count == 0)
@@ -98,15 +98,15 @@ namespace COMP229_F2016_Project1.Admin.Game
             TextBox_spectators.Text = dataTable.Rows[0]["game_spectators"].ToString();
 
         }
-        
 
+        // Called when user clicks on submit button
         protected void Button_submit_Click(object sender, EventArgs e)
         {
             sp_game_update(game_id, TextBox_game_name.Text, DropDownList_team_1.SelectedValue, DropDownList_team_2.SelectedValue, TextBox_score_ht.Text, TextBox_score_ft.Text, TextBox_date.Text, TextBox_stadium_name.Text, TextBox_referee_name.Text, TextBox_short_description.Text, TextBox_spectators.Text);
             Response.Redirect("~/");
         }
-
-        protected void Button_cancel_Click(object sender, EventArgs e)
+        // Called when user clicks on home button
+        protected void Button_home_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/");
         }

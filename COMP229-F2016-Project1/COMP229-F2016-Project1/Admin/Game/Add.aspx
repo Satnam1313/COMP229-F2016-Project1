@@ -1,4 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="COMP229_F2016_Project1.Admin.Game.Add" %>
+<%-- 	Author's name: Sahil Mahajan
+     	Student	Number:	300881428
+        Date Modified: October 24th, 2016
+        Version	History:Part-1.Project Concept & Setup, 
+                        Part-2.Main	Game Tracking Page, DB & Partial Function
+                        Part-3.Full Functionality & Site Security
+        File Description: Aspx file. Add page, creating the form to add new game. 	
+    --%>
+<%-- Add page, creating the form to add new game. --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -69,7 +78,7 @@
                 <asp:Button ID="Button_submit" runat="server" CssClass="btn btn-success" Text="Add game" OnClick="Button_submit_Click"></asp:Button>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
-                <asp:Button ID="Button_cancel" runat="server" CssClass="btn btn-danger" Text="Home" OnClick="Button_cancel_Click"></asp:Button>
+                <asp:Button ID="Button_home" runat="server" CssClass="btn btn-danger" Text="Home" OnClick="Button_home_Click"></asp:Button>
             </div>
         </div>
 

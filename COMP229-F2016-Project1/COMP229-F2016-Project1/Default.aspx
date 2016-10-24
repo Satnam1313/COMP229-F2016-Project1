@@ -1,8 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameTracker.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
+<%-- 	Author's name: Sahil Mahajan
+     	Student	Number:	300881428
+        Date Modified: October 24th, 2016
+        Version	History:Part-1.Project Concept & Setup, 
+                        Part-2.Main	Game Tracking Page, DB & Partial Function
+                        Part-3.Full Functionality & Site Security
+        File Description: Aspx file. Default.aspx, Displays four games for a particular week, also shows the added functionality if the user is signed in (admin). 	
+    --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+     <%-- Admin User Game Display --%>
     <asp:LoginView ID="LoginView1" runat="server">
         <LoggedInTemplate>
             <div class="container jumbotron">
@@ -19,6 +27,7 @@
 
         <!-- Games Row -->
         <div class="row">
+        <%-- Admin -Game 1 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -83,7 +92,7 @@
                 </p>
             </div>
             
-            <%-- Game 2 --%>
+            <%-- Admin -Game 2 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -153,6 +162,7 @@
 
         <!-- Games Row -->
         <div class="row">
+        <%-- Admin -Game 3 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -217,7 +227,7 @@
                 </p>
             </div>
             
-            <%-- Game 2 --%>
+            <%-- Admin -Game 4 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -317,13 +327,10 @@
         </div>
         <!-- /.row -->
 
-       
-
-       
-
     </div>
         </LoggedInTemplate>
-        <AnonymousTemplate>
+    <%-- General User Game Display --%>
+         <AnonymousTemplate>
              <!-- Page Content -->
     <div class="container jumbotron">
 
@@ -339,6 +346,7 @@
 
        <!-- Games Row -->
         <div class="row">
+        <%-- General user-Game 1 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -400,7 +408,7 @@
                 </p>
             </div>
             
-            <%-- Game 2 --%>
+            <%-- General user-Game 2 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -467,6 +475,7 @@
 
         <!-- Games Row -->
         <div class="row">
+         <%-- General user-Game 3 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
@@ -528,7 +537,7 @@
                 </p>
             </div>
             
-            <%-- Game 2 --%>
+             <%-- General user-Game 4 --%>
             <div class="col-md-6">
                 <div class="row ">
                     <%-- Team 1 --%>
