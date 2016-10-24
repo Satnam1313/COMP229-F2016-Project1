@@ -22,13 +22,22 @@ namespace COMP229_F2016_Project1 {
         protected global::System.Web.UI.WebControls.TextBox TextBox_signin_email;
         
         /// <summary>
-        /// Label_signin_email control.
+        /// RequiredFieldValidator_signin_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_signin_email;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_signin_email;
+        
+        /// <summary>
+        /// RegularExpressionValidator_signin_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator_signin_email;
         
         /// <summary>
         /// TextBox_signin_password control.
@@ -38,6 +47,15 @@ namespace COMP229_F2016_Project1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_signin_password;
+        
+        /// <summary>
+        /// RequiredFieldValidator_signin_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_signin_password;
         
         /// <summary>
         /// label_signin_message control.
@@ -67,6 +85,15 @@ namespace COMP229_F2016_Project1 {
         protected global::System.Web.UI.WebControls.TextBox TextBox_register_first_name;
         
         /// <summary>
+        /// RequiredFieldValidator_first_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_first_name;
+        
+        /// <summary>
         /// TextBox_register_last_name control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace COMP229_F2016_Project1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_register_last_name;
+        
+        /// <summary>
+        /// RequiredFieldValidator_last_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_last_name;
         
         /// <summary>
         /// TextBox_register_email control.
@@ -85,6 +121,24 @@ namespace COMP229_F2016_Project1 {
         protected global::System.Web.UI.WebControls.TextBox TextBox_register_email;
         
         /// <summary>
+        /// RequiredFieldValidator_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_email;
+        
+        /// <summary>
+        /// RegularExpressionValidator_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator_email;
+        
+        /// <summary>
         /// TextBox_register_password control.
         /// </summary>
         /// <remarks>
@@ -94,6 +148,15 @@ namespace COMP229_F2016_Project1 {
         protected global::System.Web.UI.WebControls.TextBox TextBox_register_password;
         
         /// <summary>
+        /// RequiredFieldValidator_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_password;
+        
+        /// <summary>
         /// TextBox_register_password_confirm control.
         /// </summary>
         /// <remarks>
@@ -101,6 +164,24 @@ namespace COMP229_F2016_Project1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox_register_password_confirm;
+        
+        /// <summary>
+        /// RequiredFieldValidator_password_confirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_password_confirm;
+        
+        /// <summary>
+        /// customvalidator_signup_confirm_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator customvalidator_signup_confirm_password;
         
         /// <summary>
         /// label_register_message control.

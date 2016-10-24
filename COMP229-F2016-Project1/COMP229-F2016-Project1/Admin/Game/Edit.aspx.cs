@@ -105,5 +105,10 @@ namespace COMP229_F2016_Project1.Admin.Game
             sp_game_update(game_id, TextBox_game_name.Text, DropDownList_team_1.SelectedValue, DropDownList_team_2.SelectedValue, TextBox_score_ht.Text, TextBox_score_ft.Text, TextBox_date.Text, TextBox_stadium_name.Text, TextBox_referee_name.Text, TextBox_short_description.Text, TextBox_spectators.Text);
             Response.Redirect("~/");
         }
+
+        protected void Button_cancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/");
+        }
     }
 }

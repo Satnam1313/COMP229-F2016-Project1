@@ -65,8 +65,11 @@
         </div>
         <br />
         <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+            <div class="col-xs-12 col-sm-6 col-md-6 text-right">
                 <asp:Button ID="Button_submit" runat="server" CssClass="btn btn-success" Text="Update game" OnClick="Button_submit_Click"></asp:Button>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 ">
+                <asp:Button ID="Button_cancel" runat="server" CssClass="btn btn-danger" Text="Home" OnClick="Button_cancel_Click"></asp:Button>
             </div>
         </div>
 
