@@ -16,9 +16,10 @@ namespace COMP229_F2016_Project1
         private string strConnString = ConfigurationManager.ConnectionStrings["game_trackerConnectionString"].ConnectionString;
         DataTable dataTable;
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   //Checks if the user is signedin or not, redirects to admin pannel accordingly or if not signedin, it will redirect to 
+            //the signin page.
             if (!IsPostBack)
-            {
+            {   
                 if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
                     Response.Redirect("/Admin");
@@ -27,7 +28,7 @@ namespace COMP229_F2016_Project1
                 label_signin_message.Text = "";
             }
         }
-        // Verifies if the user is valid or not and
+        // Verifies if the user is valid or not and then creates the session for the user and redirects the user to the admin pannel
         protected void Button_signin_Click(object sender, EventArgs e)
         {
             label_register_message.Text = "";
@@ -37,7 +38,7 @@ namespace COMP229_F2016_Project1
             dataTable = sp_user_read_by_email_and_password(user_username, user_password);
             if (dataTable.Rows.Count > 0)
             {
-                // Create a new ticket used for authentication
+                // Create a new ticket (creating a cookie for the session) used for authentication
                 FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
                 1, // Ticket version
                 dataTable.Rows[0]["user_id"].ToString(), // Username associated with ticket
@@ -69,8 +70,8 @@ namespace COMP229_F2016_Project1
                 Response.Redirect(returnUrl);
             }
             else
-            {
-                // Never tell the user if just the username is password is incorrect.
+            {   // Notes:
+                // Never tell the user if just the username or password is incorrect.
                 // That just gives them a place to start, once they've found one or
                 // the other is correct!
                 label_signin_message.Text = "Invalid email or password.";
@@ -97,7 +98,8 @@ namespace COMP229_F2016_Project1
                 return dt;
             }
         }
-        //
+        //Calling the stored procedure to read the user/verifies by e-mail and password 
+        //Sending the e-mail and password info to the stored procedure and receiving the user from the database
         private DataTable sp_user_read_by_email_and_password(string email, string password)
         {
             SqlConnection con = new SqlConnection(strConnString);
@@ -109,7 +111,7 @@ namespace COMP229_F2016_Project1
 
             return dt;
         }
-
+        // Register new user to the system (database)
         protected void Button_register_Click(object sender, EventArgs e)
         {
             label_register_message.Text = "";
@@ -118,9 +120,9 @@ namespace COMP229_F2016_Project1
             string last_name = TextBox_register_last_name.Text;
             string email = TextBox_register_email.Text;
             string password = TextBox_register_password.Text;
-
             DataTable dt = sp_user_insert(first_name, last_name, email, password);
-            if(dt.Rows.Count>0)
+            // Checks if the user has been registration was successful or not
+            if (dt.Rows.Count>0)
             {
                 //registration successful
                 label_register_message.Text = "Registration successful. Please proceed to signin.";
@@ -134,7 +136,7 @@ namespace COMP229_F2016_Project1
                 label_register_message.Text = "Registration failed. Please try again.";
             }
         }
-
+        //Calling the stored procedure to insert the user (first_name,last_name,email, and password)
         private DataTable sp_user_insert(string first_name, string last_name, string email, string password)
         {
             SqlConnection con = new SqlConnection(strConnString);

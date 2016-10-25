@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameTracker.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
 <%-- 	Author's name: Sahil Mahajan
      	Student	Number:	300881428
-        Date Modified: October 24th, 2016
+        Date Modified: October 25th, 2016
         Version	History:Part-1.Project Concept & Setup, 
                         Part-2.Main	Game Tracking Page, DB & Partial Function
                         Part-3.Full Functionality & Site Security
