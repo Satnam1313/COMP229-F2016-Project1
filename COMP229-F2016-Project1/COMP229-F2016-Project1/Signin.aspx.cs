@@ -126,6 +126,7 @@ namespace COMP229_F2016_Project1
             {
                 //registration successful
                 label_register_message.Text = "Registration successful. Please proceed to signin.";
+                label_register_message.BackColor = System.Drawing.Color.Green;
                 TextBox_register_first_name.Text = "";
                 TextBox_register_email.Text = "";
                 TextBox_register_last_name.Text = "";
@@ -134,6 +135,7 @@ namespace COMP229_F2016_Project1
             {
                 //Registration failed
                 label_register_message.Text = "Registration failed. Please try again.";
+                label_register_message.BackColor = System.Drawing.Color.Red;
             }
         }
         //Calling the stored procedure to insert the user (first_name,last_name,email, and password)

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="COMP229_F2016_Project1.Admin.Game.Add" %>
+﻿<%@ Page Title="Game Tracker-Add Game" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="COMP229_F2016_Project1.Admin.Game.Add" %>
 <%-- 	Author's name: Sahil Mahajan
      	Student	Number:	300881428
-        Date Modified: October 25th, 2016
+        Date Modified: October 26th, 2016
         Version	History:Part-1.Project Concept & Setup, 
                         Part-2.Main	Game Tracking Page, DB & Partial Function
                         Part-3.Full Functionality & Site Security

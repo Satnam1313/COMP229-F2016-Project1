@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="COMP229_F2016_Project1.Admin.Admin" %>
 <%-- 	Author's name: Sahil Mahajan
      	Student	Number:	300881428
-        Date Modified: October 24th, 2016
+        Date Modified: October 26th, 2016
         Version	History:Part-1.Project Concept & Setup, 
                         Part-2.Main	Game Tracking Page, DB & Partial Function
                         Part-3.Full Functionality & Site Security
@@ -11,7 +11,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Game Tracker-Game Stats</title>
     <%-- CSS Section --%>
 
     <%-- Bootstrap CSS --%>
@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#"><img src="/Images/SahilLogo.png" /></a>
+                  <a class="navbar-brand" href="/" title="Home-Game Stats"><img src="/Images/SahilLogo.png" /></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GameTracker.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP229_F2016_Project1.Default" %>
 <%-- 	Author's name: Sahil Mahajan
      	Student	Number:	300881428
-        Date Modified: October 25th, 2016
+        Date Modified: October 26th, 2016
         Version	History:Part-1.Project Concept & Setup, 
                         Part-2.Main	Game Tracking Page, DB & Partial Function
                         Part-3.Full Functionality & Site Security
-        File Description: Aspx file. Default.aspx, Displays four games for a particular week, also shows the added functionality if the user is signed in (admin). 	
+        File Description: Aspx file. Default.aspx, Displays four games for a particular week, also shows the added 
+        functionality if the user is signed in (admin). 	
     --%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -19,7 +20,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Game Stats
-                    <small>Secondary Text</small>
+                    <small>Brought to you by CARLING</small>
                 </h1>
             </div>
         </div>
@@ -302,9 +303,6 @@
             <div class="col-lg-12">
                 <ul class="pagination">
                     <li>
-                        <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
                         <asp:LinkButton ID="link_week_1" runat="server" OnClick="link_week_1_Click">Week 1</asp:LinkButton>
                     </li>
                     <li>
@@ -318,9 +316,6 @@
                     <li>
                         <asp:LinkButton ID="link_week_4" runat="server" OnClick="link_week_4_Click">Week 4</asp:LinkButton>
 
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
@@ -338,7 +333,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Game Stats
-                    <small>Secondary Text</small>
+                    <small>Brought to you by CARLING</small>
                 </h1>
             </div>
         </div>
@@ -609,9 +604,6 @@
             <div class="col-lg-12">
                 <ul class="pagination">
                     <li>
-                        <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
                         <asp:LinkButton ID="link_week_1" runat="server" OnClick="link_week_1_Click">Week 1</asp:LinkButton>
                     </li>
                     <li>
@@ -626,17 +618,10 @@
                         <asp:LinkButton ID="link_week_4" runat="server" OnClick="link_week_4_Click">Week 4</asp:LinkButton>
 
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </li>
                 </ul>
             </div>
         </div>
         <!-- /.row -->
-
-       
-
-       
 
     </div>
     <!-- /.container -->
